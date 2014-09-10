@@ -1,0 +1,6 @@
+FRAMEWORK_SEARCH_PATHS = '${PODS_ROOT}/Reveal-iOS-SDK/Reveal-Framework-1.0.4' "$(PODS_ROOT)/Reveal-iOS-SDK/Reveal-Framework-1.0.4"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/AVHexColor" "${PODS_ROOT}/Headers/Reveal-iOS-SDK"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers" -isystem "${PODS_ROOT}/Headers/AVHexColor" -isystem "${PODS_ROOT}/Headers/Reveal-iOS-SDK"
+OTHER_LDFLAGS = -ObjC -framework CFNetwork -framework CoreGraphics -framework QuartzCore -framework Reveal
+PODS_ROOT = ${SRCROOT}/Pods

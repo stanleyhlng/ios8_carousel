@@ -1,0 +1,13 @@
+PODS:
+  - AVHexColor (1.2.0)
+  - Reveal-iOS-SDK (1.0.4)
+
+DEPENDENCIES:
+  - AVHexColor (~> 1.2.0)
+  - Reveal-iOS-SDK
+
+SPEC CHECKSUMS:
+  AVHexColor: b47099552819a98dc58d7931f0f43eb6e2308342
+  Reveal-iOS-SDK: d3c8e109d42219daaa7a6e1ad2de34f0bdbb7a88
+
+COCOAPODS: 0.33.1
