@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TutorialViewController: UIViewController {
+class TutorialViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
@@ -24,6 +24,7 @@ class TutorialViewController: UIViewController {
         
         // configure scroll view
         scrollView.contentSize = contentView.frame.size
+        scrollView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,6 +32,17 @@ class TutorialViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // UIScrollViewDelegate methods
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        println("TutorialViewController - scrollViewDidEndDecelerating")
+        
+        // Get the current page based on the scroll offset
+        var page: Int = Int(round(scrollView.contentOffset.x / 320))
+        println("page = \(page)")
+        
+        // Set the current page, so the dots will update
+        pageControl.currentPage = page
+    }
 
     /*
     // MARK: - Navigation
