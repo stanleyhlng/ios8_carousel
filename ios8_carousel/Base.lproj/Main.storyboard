@@ -161,7 +161,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" id="bxq-q2-b1F">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="bxq-q2-b1F">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
@@ -195,9 +195,34 @@
                                 <color key="pageIndicatorTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <color key="currentPageIndicatorTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
+                            <view alpha="0.0" contentMode="scaleToFill" id="aXT-2m-RfF">
+                                <rect key="frame" x="0.0" y="457" width="320" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backup_button" id="vaC-jV-rCz">
+                                        <rect key="frame" x="0.0" y="3" width="320" height="97"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="B8i-X6-lGd">
+                                        <rect key="frame" x="16" y="45" width="288" height="54"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="fa5-rv-kJL" kind="modal" modalTransitionStyle="crossDissolve" id="ANG-7b-daY"/>
+                                        </connections>
+                                    </button>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="5pM-pS-AqV">
+                                        <rect key="frame" x="252" y="0.0" width="51" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </switch>
+                                </subviews>
+                            </view>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="actionsView" destination="aXT-2m-RfF" id="Rc5-ao-JPm"/>
                         <outlet property="contentView" destination="b2C-vD-hvx" id="17V-kU-vQa"/>
                         <outlet property="pageControl" destination="uoY-4y-Uil" id="O83-10-AYb"/>
                         <outlet property="scrollView" destination="bxq-q2-b1F" id="ux3-2U-5tU"/>
@@ -205,7 +230,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vbe-x7-PkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2230" y="230"/>
+            <point key="canvasLocation" x="1738" y="293"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Qb2-w5-zat">
+            <objects>
+                <viewController id="Th2-Yd-dds" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hbo-cN-FqN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="kmi-wK-Fiy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feed" id="bMf-ji-e0H">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="C1z-yK-POB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ImC-kY-cfl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2277" y="1073"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mVw-Tz-Csg">
@@ -225,8 +277,28 @@
             </objects>
             <point key="canvasLocation" x="162" y="293"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Qxd-DO-Om9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fa5-rv-kJL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wRm-aW-QGd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Th2-Yd-dds" kind="relationship" relationship="rootViewController" id="147-Eg-LxP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="orx-Ug-ykp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2277" y="293"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="backup_button" width="320" height="97"/>
+        <image name="feed" width="320" height="1564"/>
         <image name="intro" width="320" height="1136"/>
         <image name="intro_tile1" width="153" height="152"/>
         <image name="intro_tile2" width="76" height="75"/>

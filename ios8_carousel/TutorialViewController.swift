@@ -13,6 +13,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var actionsView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +43,16 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
         
         // Set the current page, so the dots will update
         pageControl.currentPage = page
+        
+        // Show / Hide button
+        UIView.animateWithDuration(0.4, animations: { () -> Void in
+            if page == 3 {
+                self.actionsView.alpha = 1
+            }
+            else {
+                self.actionsView.alpha = 0
+            }
+        })
     }
 
     /*
