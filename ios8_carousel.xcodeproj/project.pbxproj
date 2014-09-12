@@ -20,6 +20,8 @@
 		20CBC3F119C2AD7A00CFDE30 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBC3F019C2AD7A00CFDE30 /* FeedViewController.swift */; };
 		20CBC3F419C2B58600CFDE30 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBC3F319C2B58600CFDE30 /* ConversationsViewController.swift */; };
 		20CBC3F719C2B60900CFDE30 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBC3F619C2B60900CFDE30 /* SettingsViewController.swift */; };
+		20CBC3FA19C2C7F900CFDE30 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBC3F919C2C7F900CFDE30 /* AccountViewController.swift */; };
+		20CBC3FD19C2CC2100CFDE30 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBC3FC19C2CC2100CFDE30 /* TermsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		20CBC3F019C2AD7A00CFDE30 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		20CBC3F319C2B58600CFDE30 /* ConversationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
 		20CBC3F619C2B60900CFDE30 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		20CBC3F919C2C7F900CFDE30 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		20CBC3FC19C2CC2100CFDE30 /* TermsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		3A5498B7C64F467E9BD291BD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CCB7C76D6F64BF7A3D7276A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +138,8 @@
 		206C01F219C147B100994476 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				20CBC3FB19C2CC1700CFDE30 /* Terms */,
+				20CBC3F819C2C7E100CFDE30 /* Account */,
 				20CBC3F519C2B5FD00CFDE30 /* Settings */,
 				20CBC3F219C2B57B00CFDE30 /* Conversations */,
 				20CBC3EF19C2AD5400CFDE30 /* Feed */,
@@ -190,6 +196,22 @@
 				20CBC3F619C2B60900CFDE30 /* SettingsViewController.swift */,
 			);
 			name = Settings;
+			sourceTree = "<group>";
+		};
+		20CBC3F819C2C7E100CFDE30 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				20CBC3F919C2C7F900CFDE30 /* AccountViewController.swift */,
+			);
+			name = Account;
+			sourceTree = "<group>";
+		};
+		20CBC3FB19C2CC1700CFDE30 /* Terms */ = {
+			isa = PBXGroup;
+			children = (
+				20CBC3FC19C2CC2100CFDE30 /* TermsViewController.swift */,
+			);
+			name = Terms;
 			sourceTree = "<group>";
 		};
 		C17ACBD0AD6C4201961F131A /* Frameworks */ = {
@@ -339,10 +361,12 @@
 				206C01F519C147D500994476 /* IntroViewController.swift in Sources */,
 				20CBC3F419C2B58600CFDE30 /* ConversationsViewController.swift in Sources */,
 				20BD48EC19C20821003BED77 /* TutorialViewController.swift in Sources */,
+				20CBC3FD19C2CC2100CFDE30 /* TermsViewController.swift in Sources */,
 				205AAF9519C03AD200D0BD30 /* ViewController.swift in Sources */,
 				20CBC3F119C2AD7A00CFDE30 /* FeedViewController.swift in Sources */,
 				205AAF9319C03AD200D0BD30 /* AppDelegate.swift in Sources */,
 				20CBC3F719C2B60900CFDE30 /* SettingsViewController.swift in Sources */,
+				20CBC3FA19C2C7F900CFDE30 /* AccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
