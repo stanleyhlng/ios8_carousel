@@ -232,28 +232,40 @@
             </objects>
             <point key="canvasLocation" x="1738" y="293"/>
         </scene>
-        <!--View Controller-->
+        <!--Feed View Controller-->
         <scene sceneID="Qb2-w5-zat">
             <objects>
-                <viewController id="Th2-Yd-dds" sceneMemberID="viewController">
+                <viewController id="Th2-Yd-dds" customClass="FeedViewController" customModule="ios8_carousel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hbo-cN-FqN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="kmi-wK-Fiy">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="kmi-wK-Fiy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="533"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feed" id="bMf-ji-e0H">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <rect key="frame" x="0.0" y="64" width="320" height="507"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                 </subviews>
                             </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feed_nav" id="lFt-Mq-jEk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scrubber" id="Gqz-MZ-UiE">
+                                <rect key="frame" x="0.0" y="532" width="320" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="C1z-yK-POB"/>
+                    <connections>
+                        <outlet property="contentImageView" destination="bMf-ji-e0H" id="R6O-dJ-qFw"/>
+                        <outlet property="scrollView" destination="kmi-wK-Fiy" id="bOI-QY-7B7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ImC-kY-cfl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -280,7 +292,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Qxd-DO-Om9">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fa5-rv-kJL" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="fa5-rv-kJL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wRm-aW-QGd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -299,6 +311,7 @@
     <resources>
         <image name="backup_button" width="320" height="97"/>
         <image name="feed" width="320" height="1564"/>
+        <image name="feed_nav" width="320" height="65"/>
         <image name="intro" width="320" height="1136"/>
         <image name="intro_tile1" width="153" height="152"/>
         <image name="intro_tile2" width="76" height="75"/>
@@ -308,6 +321,7 @@
         <image name="intro_tile6" width="76" height="75"/>
         <image name="login_form" width="320" height="113"/>
         <image name="login_text" width="320" height="70"/>
+        <image name="scrubber" width="320" height="36"/>
         <image name="sign_in_buttons" width="320" height="104"/>
         <image name="sign_in_nav_bar" width="320" height="66"/>
         <image name="welcome1" width="320" height="568"/>

@@ -17,6 +17,7 @@
 		206C01F519C147D500994476 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206C01F419C147D500994476 /* IntroViewController.swift */; };
 		20BD48E919C15599003BED77 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD48E819C15599003BED77 /* SignInViewController.swift */; };
 		20BD48EC19C20821003BED77 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BD48EB19C20821003BED77 /* TutorialViewController.swift */; };
+		20CBC3F119C2AD7A00CFDE30 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBC3F019C2AD7A00CFDE30 /* FeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		206C01F419C147D500994476 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		20BD48E819C15599003BED77 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		20BD48EB19C20821003BED77 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		20CBC3F019C2AD7A00CFDE30 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		3A5498B7C64F467E9BD291BD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CCB7C76D6F64BF7A3D7276A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +130,7 @@
 		206C01F219C147B100994476 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				20CBC3EF19C2AD5400CFDE30 /* Feed */,
 				20BD48EA19C207F8003BED77 /* Tutorial */,
 				20BD48E719C15328003BED77 /* Sign In */,
 				206C01F319C147C100994476 /* Intro */,
@@ -157,6 +160,14 @@
 				20BD48EB19C20821003BED77 /* TutorialViewController.swift */,
 			);
 			name = Tutorial;
+			sourceTree = "<group>";
+		};
+		20CBC3EF19C2AD5400CFDE30 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				20CBC3F019C2AD7A00CFDE30 /* FeedViewController.swift */,
+			);
+			name = Feed;
 			sourceTree = "<group>";
 		};
 		C17ACBD0AD6C4201961F131A /* Frameworks */ = {
@@ -306,6 +317,7 @@
 				206C01F519C147D500994476 /* IntroViewController.swift in Sources */,
 				20BD48EC19C20821003BED77 /* TutorialViewController.swift in Sources */,
 				205AAF9519C03AD200D0BD30 /* ViewController.swift in Sources */,
+				20CBC3F119C2AD7A00CFDE30 /* FeedViewController.swift in Sources */,
 				205AAF9319C03AD200D0BD30 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
