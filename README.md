@@ -48,7 +48,7 @@ The purpose of this homework is to leverage views, view properties, and events t
     - [ ] Optional: When all events are completed, dismiss the banner.
 
 ## Time spent
-x hours spent in total
+8 hours spent in total
 
 ## Libraries
 ```
