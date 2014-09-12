@@ -87,10 +87,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="create_nav" id="I0y-vS-rGH">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="create_text" id="LUK-Fe-15K">
                                 <rect key="frame" x="0.0" y="80" width="320" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -119,13 +115,13 @@
                                         <rect key="frame" x="16" y="96" width="288" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" id="hAj-qS-pug">
                                         <rect key="frame" x="16" y="140" width="288" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="terms_text" id="CUH-hC-N9L">
                                         <rect key="frame" x="0.0" y="194" width="320" height="33"/>
@@ -138,6 +134,9 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <state key="selected" image="check_box_selected"/>
+                                        <connections>
+                                            <action selector="onCheck:" destination="gD8-ct-CoO" eventType="touchUpInside" id="EhC-iU-JSG"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Deg-sI-MGy">
                                         <rect key="frame" x="106" y="194" width="46" height="38"/>
@@ -173,12 +172,35 @@
                                     <action selector="onBack:" destination="gD8-ct-CoO" eventType="touchUpInside" id="87m-ax-5EF"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="create_nav" id="I0y-vS-rGH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="4wV-5x-fDK" appends="YES" id="tkn-Eh-1Dh"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Y7R-pF-U32"/>
+                    <connections>
+                        <outlet property="actionView" destination="0x3-Ii-q0b" id="kgw-ES-fA7"/>
+                        <outlet property="checkButton" destination="7jG-IP-Kre" id="TIH-Aj-D5w"/>
+                        <outlet property="createTextImageView" destination="LUK-Fe-15K" id="Xms-b1-qIR"/>
+                        <outlet property="emailTextField" destination="3vf-1J-hPV" id="Dr9-Fq-brk"/>
+                        <outlet property="firstNameTextField" destination="xN6-Tt-Iid" id="Ztw-SS-Ed8"/>
+                        <outlet property="inputsView" destination="ykK-ZR-puN" id="ODp-a5-Fah"/>
+                        <outlet property="lastNameTextField" destination="HAY-Hh-Tig" id="cyh-oH-pWa"/>
+                        <outlet property="passwordTextField" destination="hAj-qS-pug" id="pae-rx-U6H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfU-mL-wkL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="4wV-5x-fDK">
+                    <connections>
+                        <action selector="onTap:" destination="gD8-ct-CoO" id="emS-bd-zRs"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1212" y="-384"/>
         </scene>
