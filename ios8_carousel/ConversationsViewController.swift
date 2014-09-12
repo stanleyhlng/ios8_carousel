@@ -1,5 +1,5 @@
 //
-//  FeedViewController.swift
+//  ConversationsViewController.swift
 //  ios8_carousel
 //
 //  Created by Stanley Ng on 9/11/14.
@@ -8,34 +8,22 @@
 
 import UIKit
 
-class FeedViewController: UIViewController {
+class ConversationsViewController: UIViewController {
 
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var contentImageView: UIImageView!
-    @IBOutlet weak var settingsButton: UIButton!
-    @IBOutlet weak var conversationsButton: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        println("FeedViewController - viewDidLoad")
-        
-        // config image content view
-        contentImageView.sizeToFit()
-        
-        // config scroll view
-        var size: CGSize = CGSizeMake(contentImageView.image!.size.width, contentImageView.image!.size.height + 66)
-        scrollView.contentSize = size
+        println("ConversationsViewController - viewDidLoad")
     }
 
-    override func viewWillAppear(animated: Bool) {
-        scrollView.contentInset = UIEdgeInsetsZero
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func onBack(sender: UIButton) {
+        self.navigationController?.popViewControllerAnimated(true)
     }
 
     /*

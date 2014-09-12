@@ -90,6 +90,7 @@ class SignInViewController: UIViewController {
         println("password = \(password)")
         
         if email == "stanleyhlng@yahoo.com.hk" && password == "password" {
+            performSegueWithIdentifier("tutorialFromSignIn", sender: self)
         }
         else {
             var alertView = UIAlertView(title: "Sign In Failed", message: "Incorrect email or passowrd", delegate: self, cancelButtonTitle: "OK")
