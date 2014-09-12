@@ -17,6 +17,7 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     var signingInAlertView: UIAlertView?
+    var positions = [String: CGFloat]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,11 @@ class SignInViewController: UIViewController {
         // config keyboard show / hide observer
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "willShowKeyboard:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "willHideKeyboard:", name: UIKeyboardWillHideNotification, object: nil)
+        
+        // store objects' initial position
+        positions.updateValue(loginTextImageView.frame.origin.y, forKey: "login_text")
+        positions.updateValue(inputsView.frame.origin.y, forKey: "inputs_view")
+        positions.updateValue(actionView.frame.origin.y, forKey: "action_view")
     }
 
     override func didReceiveMemoryWarning() {
@@ -98,6 +104,11 @@ class SignInViewController: UIViewController {
         }
     }
     
+    @IBAction func onTap(sender: UITapGestureRecognizer) {
+        println("SignInViewController - onTap")
+        view.endEditing(true)
+    }
+    
     func delay(delay:Double, closure:()->()) {
         dispatch_after(
             dispatch_time(
@@ -133,8 +144,6 @@ class SignInViewController: UIViewController {
         println("height: \(kbSize.height), width: \(kbSize.width)")
         
         // reposition views
-        //commentView.frame.origin.y = kbSize.height + 20
-        
         UIView.animateWithDuration(0.4, animations: {
             
             // reposition login text
@@ -153,7 +162,17 @@ class SignInViewController: UIViewController {
         println("SignInViewController - willHideKeyboard")
         
         // reposition views
-        //commentView.frame.origin.y = view.frame.height - 48 - commentView.frame.height;
+        UIView.animateWithDuration(0.4, animations: {
+            
+            // reposition login text
+            self.loginTextImageView.frame.origin.y = self.positions["login_text"]!
+            
+            // reposition inputs view
+            self.inputsView.frame.origin.y = self.positions["inputs_view"]!
+            
+            // reposition action view
+            self.actionView.frame.origin.y = self.positions["action_view"]!
+        })
     }
     
     /*
