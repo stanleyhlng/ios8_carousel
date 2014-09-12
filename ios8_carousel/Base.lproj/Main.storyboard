@@ -73,6 +73,12 @@
                     <connections>
                         <outlet property="contentImageView" destination="ogZ-eU-IGf" id="ngV-6P-PyG"/>
                         <outlet property="scrollView" destination="ogz-l9-o3l" id="4RO-ey-liR"/>
+                        <outlet property="tile1View" destination="2Wh-9O-nRb" id="YJx-um-Wat"/>
+                        <outlet property="tile2View" destination="bqL-Bp-kl5" id="Sff-2x-zMS"/>
+                        <outlet property="tile3View" destination="kas-8r-e6z" id="LwN-xF-DfF"/>
+                        <outlet property="tile4View" destination="oKL-YT-9Eb" id="TRk-cB-eNq"/>
+                        <outlet property="tile5View" destination="7Km-zp-a5g" id="FrR-l2-LFO"/>
+                        <outlet property="tile6View" destination="IKr-fd-Cfp" id="p4f-Oy-w2k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -159,6 +165,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Jeo-CZ-J7p">
+                                        <rect key="frame" x="20" y="0.0" width="280" height="57"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="s44-ym-bqG" kind="modal" id="IqW-3t-yPB"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -638,4 +654,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="j9F-BB-gwo"/>
+    </inferredMetricsTieBreakers>
 </document>
