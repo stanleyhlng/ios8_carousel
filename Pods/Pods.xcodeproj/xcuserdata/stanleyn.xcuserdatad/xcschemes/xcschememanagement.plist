@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Reveal-iOS-SDK.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>74B813084A4542F6A738B14D</key>
+		<key>00C84C1472C79FAA4B235604</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A8C946E255184B0A8A5941A9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A97DD852094C44FE960CA420</key>
+		<key>674CF45AFF6500527FC1BD14</key>
 		<dict>
 			<key>primary</key>
 			<true/>
