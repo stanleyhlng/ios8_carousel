@@ -17,7 +17,7 @@ class TermsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         let url = NSURL(string: "https://www.dropbox.com/m/tos")
-        let request = NSURLRequest(URL: url)
+        let request = NSURLRequest(URL: url!)
         webView.loadRequest(request)
     }
 

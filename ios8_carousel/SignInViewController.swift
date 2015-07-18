@@ -81,7 +81,7 @@ class SignInViewController: UIViewController {
         signingInAlertView!.show()
         
         // do: sign in
-        delay(2, callbackSignIn)
+        delay(2, closure: callbackSignIn)
     }
     
     func callbackSignIn()->() {
@@ -129,7 +129,7 @@ class SignInViewController: UIViewController {
     }
     
     func isValidPassword(password:String)->Bool {
-        return countElements(password) >= 6
+        return count(password) >= 6
     }
     
     func willShowKeyboard(notification: NSNotification) {
